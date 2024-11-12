@@ -45,14 +45,17 @@ export default function LoginPage() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" type="password" className="h-12" />
             </div>
-            <Button className="w-full h-12 text-lg mt-4" type="submit">
-              Sign In
-            </Button>
+
+            <Link href="/">
+              <Button className="w-full h-12 text-lg mt-4" type="submit">
+                Sign In
+              </Button>
+            </Link>
           </form>
         </CardContent>
         <CardFooter className="text-center">
           <div className="text-sm text-muted-foreground">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/signup" className="underline text-primary">
               Sign up
             </Link>

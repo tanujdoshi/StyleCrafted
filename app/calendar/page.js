@@ -21,96 +21,9 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { Menu, Plus, Edit, Trash2 } from "lucide-react";
-import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-const Navbar = () => (
-  <nav className="bg-white dark:bg-gray-800 shadow-md">
-    <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-      <Link
-        href="/"
-        className="text-2xl font-bold text-blue-600 dark:text-blue-400"
-      >
-        StyleCrafted
-      </Link>
-      <div className="hidden md:flex space-x-4">
-        <Link
-          href="/recommendations"
-          className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
-        >
-          Recommendations
-        </Link>
-        <Link
-          href="/wardrobe"
-          className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
-        >
-          My Wardrobe
-        </Link>
-        <Link
-          href="/calendar"
-          className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
-        >
-          Calendar
-        </Link>
-        <Link
-          href="/subscription"
-          className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
-        >
-          Subscription
-        </Link>
-      </div>
-      <div className="flex items-center space-x-4">
-        <Link href="/login">
-          <Button variant="ghost">Login</Button>
-        </Link>
-        <Link href="/signup">
-          <Button>Sign Up</Button>
-        </Link>
-      </div>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild className="md:hidden">
-          <Button variant="outline" size="icon">
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuLabel>Navigation</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem asChild>
-            <Link href="/recommendations">Recommendations</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link href="/wardrobe">My Wardrobe</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link href="/calendar">Calendar</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem asChild>
-            <Link href="/subscription">Subscription</Link>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </div>
-  </nav>
-);
+import { Plus, Edit, Trash2 } from "lucide-react";
 
 export default function CalendarPage() {
   const [date, setDate] = useState(new Date());
@@ -149,7 +62,6 @@ export default function CalendarPage() {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
-      <Navbar />
       <header className="bg-white dark:bg-gray-800 shadow">
         <div className="container mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
