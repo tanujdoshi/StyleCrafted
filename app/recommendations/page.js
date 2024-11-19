@@ -170,7 +170,7 @@ export default function RecommendationsPage() {
           </h2>
           <ScrollArea className="w-full whitespace-nowrap rounded-md border">
             <div className="flex w-max space-x-4 p-4">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
+              {[1, 2, 3, 4].map((item) => (
                 <TrendingItemCard key={item} itemId={item} />
               ))}
             </div>
@@ -264,7 +264,7 @@ function OutfitCard({ outfit }) {
       <CardContent>
         <div className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-md mb-4 relative overflow-hidden">
           <Image
-            src={`/placeholder.svg?height=300&width=300&text=Outfit+${outfit.id}`}
+            src={`/images/outfit_${outfit.id}.jpg`}
             alt={outfit.name}
             layout="fill"
             objectFit="cover"
@@ -292,11 +292,11 @@ function OutfitCard({ outfit }) {
 
 function TrendingItemCard({ itemId }) {
   return (
-    <Card className="w-[200px]">
+    <Card className="w-[300px]">
       <CardContent className="p-0">
         <div className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-t-md relative overflow-hidden">
           <Image
-            src={`/placeholder.svg?height=200&width=200&text=Item+${itemId}`}
+            src={`/images/product_${itemId}.jpg`}
             alt={`Trending Item ${itemId}`}
             layout="fill"
             objectFit="cover"

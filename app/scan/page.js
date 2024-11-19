@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
@@ -93,7 +94,9 @@ export default function WardrobeScanPage() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Upload Image</Button>
+              <Link href="/wardrobe">
+                <Button className="w-full">Upload Image</Button>
+              </Link>
             </CardFooter>
           </Card>
         </div>

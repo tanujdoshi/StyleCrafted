@@ -28,12 +28,6 @@ const Navbar = () => {
             Recommendations
           </Link>
           <Link
-            href="/wardrobe"
-            className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
-          >
-            My Wardrobe
-          </Link>
-          <Link
             href="/calendar"
             className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
           >
@@ -44,6 +38,13 @@ const Navbar = () => {
             className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
           >
             Subscription
+          </Link>
+
+          <Link
+            href="/feedback"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
+          >
+            Feedback
           </Link>
         </div>
         <div className="flex items-center space-x-4">

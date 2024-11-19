@@ -32,8 +32,11 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <main className="container mx-auto px-4 py-12">
-        <section className="flex flex-col md:flex-row items-center justify-between mb-16">
-          <div className="md:w-1/2 mb-8 md:mb-0">
+        <section className="flex flex-col-reverse md:flex-row items-center justify-between mb-16 gap-8 md:gap-12">
+          <div
+            className="md:w-1/2 text-center md:text-left animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-gray-100 leading-tight">
               Elevate Your Style with AI-Powered Fashion
             </h1>
@@ -41,21 +44,27 @@ export default function HomePage() {
               Discover your perfect look, organize your wardrobe, and stay on
               trend with StyleCrafted.
             </p>
-            <Button
-              size="lg"
-              className="animate-pulse bg-blue-600 hover:bg-blue-700 text-white"
-            >
-              Get Started <ArrowRight className="ml-2" />
-            </Button>
+            <Link href="/scan">
+              <Button
+                size="lg"
+                className="animate-bounce-once bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Get Started <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
-          <div className="md:w-1/2">
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Stylish outfit showcase"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg object-cover"
-            />
+          <div
+            className="md:w-1/2 animate-fade-in"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <div className="relative w-[600px] h-[400px] mx-auto">
+              <Image
+                src="/images/home_banner.jpg"
+                alt="Stylish outfit showcase"
+                fill
+                className="rounded-lg shadow-lg object-cover"
+              />
+            </div>
           </div>
         </section>
 
@@ -88,7 +97,7 @@ export default function HomePage() {
                 className="overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <Image
-                  src={`/placeholder.svg?height=300&width=300&text=Style+${item}`}
+                  src={`/images/product_${item}.jpg`}
                   alt={`Trending style ${item}`}
                   width={300}
                   height={300}
