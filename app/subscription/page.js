@@ -12,7 +12,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Basic",
-    price: "$9.99",
+    price: "$0",
     features: [
       "Wardrobe organization",
       "Basic outfit recommendations",
@@ -20,23 +20,13 @@ const plans = [
     ],
   },
   {
-    name: "Pro",
-    price: "$19.99",
+    name: "Premium",
+    price: "$9.99",
     features: [
       "Everything in Basic",
       "Advanced AI styling",
       "Unlimited outfit recommendations",
       "Trend forecasting",
-    ],
-  },
-  {
-    name: "Premium",
-    price: "$29.99",
-    features: [
-      "Everything in Pro",
-      "Personal stylist consultations",
-      "Exclusive brand partnerships",
-      "Early access to new features",
     ],
   },
 ];
@@ -53,7 +43,7 @@ export default function SubscriptionPage() {
       </header>
 
       <main className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {plans.map((plan, index) => (
             <Card
               key={index}
@@ -78,7 +68,7 @@ export default function SubscriptionPage() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full">
-                  {index === 1 ? "Upgrade to Pro" : "Choose Plan"}
+                  {index === 1 ? "Upgrade to Pro" : "Current Plan"}
                 </Button>
               </CardFooter>
             </Card>
