@@ -266,19 +266,6 @@ function AddEventDialog({ onAddEvent }) {
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="outfit" className="text-right">
-                Outfit
-              </Label>
-              <Input
-                id="outfit"
-                value={newEvent.outfit}
-                onChange={(e) =>
-                  setNewEvent({ ...newEvent, outfit: e.target.value })
-                }
-                className="col-span-3"
-              />
-            </div>
-            <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="notes" className="text-right">
                 Notes
               </Label>
